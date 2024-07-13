@@ -9,6 +9,11 @@ This project aims to create a tool that automatically generates Multiple Choice 
 + Question Generation: Creates MCQs based on extracted information, including factual, inferential, and application-based questions.
 + Accuracy: Strives to generate accurate and relevant MCQs.
 
+![Screenshot 2024-07-02 143107](https://github.com/user-attachments/assets/5de4609b-d057-4675-8569-8963d3dbd2ae)
+### upload pdf or text file and choose number of questions 
+
+![Screenshot 2024-07-02 143124](https://github.com/user-attachments/assets/b961b70d-4018-4185-8478-b90ec5a15b0b)
+
 ## Requirements
 + Python (version 3.6 or later)
 + spaCy

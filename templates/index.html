@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizcraft</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
+        }
+        .container {
+            text-align: center;
+            border-radius: 30px;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Increase box shadow effect */
+            background: linear-gradient(135deg, #f2c4c4 0%, #FFB6C1 100%);
+        }
+        .headline {
+            text-align: center;
+            margin-bottom: 100px;
+            font-size: 32px;
+            font-weight: bold;
+            color: #4B0082;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #4B0082; /* Color for labels */
+        }
+        .form-group input, .form-group select, .form-group button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .form-group input, .form-group select {
+            background: linear-gradient(135deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
+            border: 1px solid #4B0082; /* Border color for input and select */
+            color: #4B0082; /* Text color for input and select */
+        }
+        .form-group button {
+            background-color: #4B0082; /* Background color for button */
+            color: #FFFFFF; /* Text color for button */
+        }
+        .form-group input[type="file"] {
+            width: auto; /* Adjust the width to auto */
+            margin-left: auto; /* Center the input */
+            margin-right: auto; /* Center the input */
+        }
+        .form-group select {
+            width: 20px;/* Adjust the width to auto */
+            margin-left: auto; /* Center the select */
+            margin-right: auto; /* Center the select */
+        }
+        /* .side-text {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            font-weight: bold;
+            color: #343a40; 
+        }
+        .left-side-text {
+            left: 20px;
+        }
+        .right-side-text {
+            right: 20px;
+        } */
+        .btn {
+            border-radius: 10px;
+            background: linear-gradient(135deg, #f89283 0%, #FF6A88 55%, #FF99AC 100%);
+        }
+        .lead{
+            color: #4B0082;
+            font-weight: 200;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<!--   # here add nav -->
+   <div class="headline"><h1 style="font-size: 50px;">QuizCraft:Automated MCQ Generator</h1></div>
+    <div class="container">
+        <p class="lead"><b>This application generates multiple-choice questions (MCQs) based on the provided text. You can either upload a PDF or TXT file containing the text.</b></p>
+        <form method="POST" enctype="multipart/form-data">
+            <div class="form-group" style="margin-top:50px;">
+                <label for="file">Upload File(s) (PDF or TXT)</label>
+                <input type="file" class="form-control-file" id="file" name="files[]" multiple style="margin-right:36%;">
+            </div>
+            <div class="form-group">
+                <label for="num_questions">Number of Questions:</label>
+                <select style="margin-left:45%;background:rgb(89, 58, 148); color:white;width:10%" class="form-control" id="num_questions" name="num_questions">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+            <button type="submit" class="btn">Generate MCQs</button>
+        </form>
+    </div>
+</body>
+</html>
